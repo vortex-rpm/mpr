@@ -1,0 +1,18 @@
+--- mpr.run.php.orig	2012-09-19 15:59:30.706270028 +0400
++++ mpr.run.php	2012-09-19 15:59:40.789323447 +0400
+@@ -2,7 +2,7 @@
+ <?php
+ namespace mpr\client;
+ 
+-$pathToLibs = __DIR__;
++$pathToLibs = "/usr/lib/mpr";
+ 
+ require_once "{$pathToLibs}/helper.php";
+ require_once "{$pathToLibs}/mpr.php";
+@@ -15,4 +15,4 @@
+ }
+ $mpr->{$function}($params);
+ 
+-__halt_compiler();
+\ No newline at end of file
++__halt_compiler();
