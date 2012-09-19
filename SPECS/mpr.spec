@@ -8,6 +8,7 @@ License:        MIT
 URL:            https://github.com/greevex/mpr
 Source0:        https://github.com/downloads/greevex/%{name}/%{name}_client-1.1.src.tar.gz
 Patch0:		path_to_libs.patch
+Patch1:		config_path.patch
 Vendor:		Vortex RPM
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -21,6 +22,7 @@ Also may be "\m/ Phar Repository" ;)
 %prep
 %setup -n client
 %patch0 -p0
+%patch1 -p0
 perl -pi -e "s|/usr/lib|%{_libdir}|g" %{name}.run.php
 
 

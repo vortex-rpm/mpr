@@ -1,0 +1,18 @@
+--- helper.php.orig	2012-09-19 16:31:27.874840245 +0400
++++ helper.php	2012-09-19 16:32:05.070177557 +0400
+@@ -15,7 +15,7 @@
+     {
+         static $config;
+         if($config == null) {
+-            $configPath = __DIR__ . "/config.json";
++            $configPath = "/etc/mpr.json";
+             if(!file_exists($configPath)) {
+                 $this->writeLn("[ERROR] File {$configPath} not found! You can find sample config at " . __DIR__ . "/config.sample.json");
+                 exit(1);
+@@ -290,4 +290,4 @@
+         }
+         return $packages;
+     }
+-}
+\ No newline at end of file
++}
